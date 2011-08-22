@@ -1,16 +1,12 @@
 package Plack::Middleware::Reproxy;
 use strict;
 use parent qw(Plack::Middleware);
-our $VERSION = '0.00001';
+our $VERSION = '0.00002';
 
 sub call {
     my ($self, $env) = @_;
 
     my $res = $self->app->( $env );
-    # if this is HEAD request, the response is pass through
-    if ($env->{REQUEST_METHOD} eq 'HEAD') {
-        return $res;
-    }
 
     # Otherwise, wait for headers
     return $self->response_cb( $res, sub {
