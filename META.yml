@@ -10,7 +10,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.36
 distribution_type: module
 dynamic_config: 1
-generated_by: 'Module::Install version 1.04'
+generated_by: 'Module::Install version 1.06'
 license: unknown
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -27,4 +27,4 @@ requires:
   URI: 0
 resources:
   repository: git://github.com/lestrrat/Plack-Middleware-Reproxy.git
-version: 0.00003
+version: 0.00004
